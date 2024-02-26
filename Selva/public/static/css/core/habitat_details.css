@@ -1,0 +1,283 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: minecraft-regular;
+    src: url(../font/Minecraft-Regular.woff);
+}
+@font-face {
+    font-family: minecraft-head;
+    src: url(../font/Minecrafter.woff);
+}
+
+@font-face {
+    font-family: minecraft-bold;
+    src: url(../font/Minecraft-Bold.woff2);
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+
+.head1{
+    font-family: minecraft-head;
+    position: absolute;
+    color: white;
+    font-size: 6rem;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.animals{
+    margin: 2%;
+}
+.searchTerm {
+    width: 99%;
+    font-family: minecraft-regular;
+    border: 3px solid #08929ed9;
+    padding: 5px;
+    height: 50px;
+    outline: none;
+    font-size: 120%;
+    
+  }
+  
+.searchTerm:focus{
+    color: #006D77;
+  }
+
+.sub-container{
+    width: 100%;
+    border: 1px  solid black;
+  }
+.animalTable{
+    display: flex;
+    align-items: center;
+    width: 96%;
+    font-family: minecraft-regular;
+    font-size: 1.5rem;
+    justify-content: space-between;
+    margin-left: 1%;
+    margin-block: 2%;
+    padding-block: 1%;
+    padding-inline: 1%;
+    box-shadow: 0 0 .7rem rgba(0, 0, 0, 0.289);
+    border-radius: 10px;
+  }
+
+  .name{
+    font-size: 1.5rem;
+  }
+
+  button{
+    color:white;
+    background-color: #006D77;
+    border: none;
+    font-family: minecraft-regular;
+    font-size: 1.5rem;
+    padding: 1% 2%;
+    border-radius: 5px;
+  }
+
+
+  .popup {
+    display: none;
+    position: fixed;
+    padding: 10px;
+    width: 70%;
+    left: 15%;
+    top: 50%;
+    margin-top: -100px;
+    background: #FFF;
+
+    z-index: 20;
+  }
+  .header{
+    text-align: center;
+    width: 100%;
+    font-size: 2rem;
+    font-family: minecraft-head;
+
+  }
+  #popup:after {
+    position: fixed;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: -2;
+  }
+  
+  #popup:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #FFF;
+    z-index: -1;
+  }
+
+  .lable,.table-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-left:4%;
+  }
+  .lable{
+    font-size: 1.4rem;
+    margin-block:  2%;
+    font-family: minecraft-bold;
+  }
+  .table-list{
+    margin-block: 2%;
+    font-family: minecraft-regular;
+  }
+
+.top{
+  display: flex;
+  font-family: minecraft-regular;
+}
+
+
+
+
+
+.footer {
+  display: flex;
+  font-family:minecraft-regular ;
+  flex-flow: row wrap;
+  padding: 30px 30px 20px 30px;
+  color: #2f2f2f;
+  height: 40vh;
+  background-color: #fff;
+  border-top: 1px solid #e5e5e5;
+}
+
+.footer > * {
+  flex:  1 100%;
+}
+
+.footer__addr {
+  margin-right: 1.25em;
+  margin-bottom: 2em;
+}
+
+.footer__logo {
+  font-family: 'Pacifico', cursive;
+  font-weight: 400;
+  text-transform: lowercase;
+  font-size: 1.5rem;
+}
+
+.footer__addr h2 {
+  margin-top: 1.3em;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.nav__title {
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.footer address {
+  font-style: normal;
+  color: #999;
+}
+
+.footer__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  max-width: max-content;
+  background-color: rgb(33, 33, 33, 0.07);
+  border-radius: 100px;
+  color: #2f2f2f;
+  line-height: 0;
+  margin: 0.6em 0;
+  font-size: 1rem;
+  padding: 0 1.3em;
+}
+
+.footer ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer li {
+  line-height: 2em;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer__nav {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.footer__nav > * {
+  flex: 1 50%;
+  margin-right: 1.25em;
+}
+
+.nav__ul{
+  display: flex;
+  flex-direction: column;
+}
+.nav__ul a {
+  
+  
+  color: #999;
+}
+
+.nav__ul--extra {
+  
+  column-count: 2;
+  column-gap: 1.25em;
+}
+
+.legal {
+  display: flex;
+  flex-wrap: wrap;
+  color: #999;
+}
+  
+.legal__links {
+  display: flex;
+  align-items: center;
+}
+
+.heart {
+  color: #2f2f2f;
+}
+
+@media screen and (min-width: 24.375em) {
+  .legal .legal__links {
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 40.375em) {
+  .footer__nav > * {
+    flex: 1;
+  }
+  
+  .nav__item--extra {
+    flex-grow: 2;
+  }
+  
+  .footer__addr {
+    flex: 1 0px;
+  }
+  
+  .footer__nav {
+    flex: 2 0px;
+  }
+}

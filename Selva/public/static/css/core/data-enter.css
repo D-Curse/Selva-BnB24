@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: minecraft-regular;
+    src: url(../font/Minecraft-Regular.woff);
+}
+@font-face {
+    font-family: minecraft-head;
+    src: url(../font/Minecrafter.woff);
+}
+
+@font-face {
+    font-family: minecraft-bold;
+    src: url(../font/Minecraft-Bold.woff2);
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+
+img{
+    opacity: .9;
+}
+.habitats{
+    font-family: minecraft-head;
+    position: absolute;
+    font-size: 100px;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: linear-gradient(45deg, #f3ec78, #af4261);
+    background-size: 100%;
+    background-repeat: repeat;
+
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  filter: drop-shadow(0 0 .7rem rgb(0, 0, 0) );
+}
+.main-container{
+    position: relative;
+    
+}
+h2{
+    font-size:3rem ;
+    font-family: minecraft-head;
+    color: white;
+}
+.main{
+    position: absolute;
+    display: flex;
+    padding-block: 2%;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    height: 80vh;
+    box-shadow: 0 0 .5 gray;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.106);
+    border-radius: 10px;
+}
+
+.main-form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2%;
+    width: 70%;
+    height: 80vh;
+
+}
+.elements{
+    display: flex;
+    flex-direction: column;
+    line-height: 8rem;
+}
+label{
+    font-family: minecraft-bold;
+    color: white;
+    font-size: 1.6rem;
+}
+input{
+    border: none;
+    font-size: 1.2rem;
+    font-family: minecraft-regular;
+    border-bottom: 1px  solid white;
+    background: transparent;
+   
+}
+textarea:focus, input:focus{
+    outline: none;
+    color: white;
+}
+input::placeholder{
+    color: white;
+}
+button{
+    margin-top: 5%;
+    border: none;
+    width: 50%;
+    font-size: 1.6rem;
+    font-family: minecraft-bold;
+    padding-block: 1%;
+    border-radius: 2rem;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+</head>
+<body>
+    <h2>Add Ranger Information</h2>
+    <form method="post" action="{% url 'ranger_reg' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add Ranger</button>
+    </form>
+    
+    {% if ranger %}
+        <p>Ranger added successfully! UUID: {{ ranger.uuid }}</p>
+    {% endif %}
+
+    <form method="post" action="{% url 'get_ranger_uuid' %}">
+        {% csrf_token %}
+        <label for="name">Ranger Name:</label>
+        <input type="text" name="name" required>
+        <button type="submit">Get UUID</button>
+    </form>
+
+    {% if error_not_found %}
+        <p>Ranger not found with the provided name.</p>
+    {% endif %}
+</body>
+</html>

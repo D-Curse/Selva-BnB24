@@ -1,0 +1,150 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/core/habitat_details.css' %}">
+</head>
+<body>
+    <div class="main-continaer">
+        <div class="top-section">
+            <img src="{% static selected_habitat.habitat_image.url %}" width="100%" height="700vh" alt="">
+            <div class="head1">{{ selected_habitat.habitat_type }}</div>
+        </div>
+        <div class="animals">
+            <div class="sub-container">
+                <div class="search">
+                    <input type="text" class="searchTerm" placeholder="Search Animal" oninput="searchApplicants()">
+                </div>
+
+
+                {% for animal in related_animals %}
+                <div class="popup" id="popup_{{ animal.id }}">
+                    <div class="top">
+                        <div class="header">Animal</div>
+                        <a href="#" onclick="hide('popup_{{ animal.id }}')"><i class="fa-regular fa-circle-xmark"></i></a>
+                    </div>
+                    
+                    <div class="lable">
+                        <div class="name1">Species</div>
+                        <div class="age">Age</div>
+                        <div class="sex">Sex</div>
+                        <div class="health">Health</div>
+                    </div>
+                    <div class="table-list">
+                      <div class="name1">{{ animal.animal_type }}</div>
+                      <div class="age">{{ animal.age }} years</div>
+                      <div class="sex">{{ animal.sex }}</div>
+                      <div class="health">{{ animal.health }}</div>          
+                    </div>
+                  </div>
+                {% endfor %}
+
+              {% for animal in related_animals %}
+                  <div class="animalTable">
+                      <div class="name">{{ animal.nickname }}</div>
+                      <div class="total">Total Population: {{ animal.animal_type.population }}</div>
+              
+                      <!-- Create a unique ID for each button based on the animal's ID -->
+                      <button id="animalButton_{{ animal.id }}" onclick="show('popup_{{ animal.id }}')">View Details</button>
+                  </div>
+              {% endfor %}
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer__addr">
+              <h1 class="footer__logo">Something</h1>
+                  
+              <h2>Contact</h2>
+              
+              <address>
+                5534 Somewhere In. The World 22193-10212<br>
+                    
+                <a class="footer__btn" href="mailto:example@gmail.com">Email Us</a>
+              </address>
+            </div>
+            
+            <ul class="footer__nav">
+              <li class="nav__item">
+                <h2 class="nav__title">Media</h2>
+          
+                <ul class="nav__ul">
+                  <li>
+                    <a href="#">Online</a>
+                  </li>
+          
+                  <li>
+                    <a href="#">Print</a>
+                  </li>
+                      
+                  <li>
+                    <a href="#">Alternative Ads</a>
+                  </li>
+                </ul>
+              </li>
+              
+              <li class="nav__item nav__item--extra">
+                <h2 class="nav__title">Technology</h2>
+                
+                <ul class="nav__ul nav__ul--extra">
+                  <li>
+                    <a href="#">Hardware Design</a>
+                  </li>
+                  
+                  <li>
+                    <a href="#">Software Design</a>
+                  </li>
+                  
+                  <li>
+                    <a href="#">Digital Signage</a>
+                  </li>
+                  
+                  <li>
+                    <a href="#">Automation</a>
+                  </li>
+                  
+                  <li>
+                    <a href="#">Artificial Intelligence</a>
+                  </li>
+                  
+                  <li>
+                    <a href="#">IoT</a>
+                  </li>
+                </ul>
+              </li>
+              
+              <li class="nav__item">
+                <h2 class="nav__title">Legal</h2>
+                
+                <ul class="nav__ul">
+                  <li>
+                    <a href="#">Privacy Policy</a>
+                  </li>
+                  
+                  <li>
+                    <a href="#">Terms of Use</a>
+                  </li>
+                  
+                  <li>
+                    <a href="#">Sitemap</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            
+            <div class="legal">
+              <p>&copy; 2019 Something. All rights reserved.</p>
+              
+              <div class="legal__links">
+                <span>Made with <span class="heart">♥</span> remotely from Anywhere</span>
+              </div>
+            </div>
+          </footer>
+    </div>
+    <script src="{% static "js/core/habitat_details.js" %}"></script>
+    <script src="https://kit.fontawesome.com/25bbf2816f.js" crossorigin="anonymous"></script>
+</body>
+</html>

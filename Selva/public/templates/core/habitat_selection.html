@@ -1,0 +1,184 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selection page</title>
+    <link rel="stylesheet" href="{% static "css/core/habitat_selection.css" %}">
+</head>
+<body>
+
+    <div class="main-container">
+
+
+        <div class="navbar">
+            <div class="logo">Selva</div>
+            <div class="elements">
+                <ul class="navbar-list">
+                    <li class="home">Home</li>
+                    <li class="selection-page">Selection</li>
+                    <li class="details-page">Biomes</li>
+                    <li class="login">
+                      <a href="{% url 'login' %}">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        
+
+
+        <div class="top-section">
+            <img src="{% static 'img/habitat-image-1.png'%}" width="100%" height="" alt="">
+            <div class="habitats">
+                Habitats
+            </div>
+        </div>
+        
+
+
+        <div class="habitats-selection">
+          <div class="forest">
+              <a href="{% url 'habitat_detail' habitat_type='Forest' %}">
+                  <div class="text1">
+                      <div class="head1">Forest</div>
+                      <div class="info1">Enchanting realms where a tapestry of trees creates a rich mosaic, forests are vital ecosystems fostering biodiversity, serving as havens for countless species, and contributing significantly to the Earth's oxygen supply.</div>
+                  </div>
+                  <div class="image2">
+                      <img src="{% static 'img/Amazon-Rainforest.png'%}" width="100%" alt="">
+                  </div>
+              </a>
+          </div>
+          
+          <div class="desert">
+              <a href="{% url 'habitat_detail' habitat_type='Dessert' %}">
+                  <div class="image3">
+                      <img src="{% static 'img/Sahara-Desert.png'%}" width="100%" alt="">
+                  </div>
+                  <div class="text2">
+                      <div class="head2">Desert</div>
+                      <div class="info2">Rugged expanses of aridity, deserts exhibit a stark beauty with vast stretches of sand or rock, challenging life to adapt to scarce water resources. From towering dunes to resilient flora and fauna, these landscapes embody nature's ability to thrive in extreme conditions.</div>
+                  </div>        
+              </a>
+          </div>
+      
+          <div class="snow">
+              <a href="{% url 'habitat_detail' habitat_type='Snow' %}">    
+                  <div class="text3">
+                      <div class="head3">Snow</div>
+                      <div class="info3">Transforming landscapes into serene blankets of white, snow imparts a serene beauty, offering opportunities for winter recreation and influencing climates as it blankets the ground in crystalline structures, creating a breathtaking winter wonderland.</div>
+                  </div>
+                  <div class="image4">
+                      <img src="{% static 'img/Arctic-Tundra.png'%}" width="100%" alt="">
+                  </div>
+              </a>
+          </div>
+      
+          <div class="grassland">
+              <a href="{% url 'habitat_detail' habitat_type='Grassland' %}">
+                  <div class="image5">
+                      <img src="{% static 'img/Savannah-Grassland.png'%}" width="100%"  alt="">
+                  </div>
+                  <div class="text4">
+                      <div class="head4">GrassLand</div>
+                      <div class="info4">Expansive grasslands feature waving grasses and scattered trees, providing vital habitats for diverse wildlife. With dynamic seasonal changes, these ecosystems play a key role in global biodiversity, supporting grazers and predators while balancing the delicate interplay of nature.</div>
+                  </div>
+              </a>
+          </div>
+      </div>
+
+        <footer class="footer">
+            <div class="footer__addr">
+              <h1 class="footer__logo">Something</h1>
+                  
+              <h2>Contact</h2>
+              
+              <address>
+                5534 Somewhere In. The World 22193-10212<br>
+                    
+                <a class="footer__btn" href="mailto:example@gmail.com">Email Us</a>
+              </address>
+            </div>
+            
+            <ul class="footer__nav">
+              <li class="nav__item">
+                <h2 class="nav__title">Media</h2>
+          
+                <ul class="nav__ul">
+                  <li>
+                    <a href="#">Online</a>
+                  </li>
+          
+                  <li>
+                    <a href="#">Print</a>
+                  </li>
+                      
+                  <li>
+                    <a href="#">Alternative Ads</a>
+                  </li>
+                </ul>
+              </li>
+              
+              <li class="nav__item nav__item--extra">
+                <h2 class="nav__title">Technology</h2>
+                
+                <ul class="nav__ul nav__ul--extra">
+                  <li>
+                    <a href="#">Hardware Design</a>
+                  </li>
+                  
+                  <li>
+                    <a href="#">Software Design</a>
+                  </li>
+                  
+                  <li>
+                    <a href="#">Digital Signage</a>
+                  </li>
+                  
+                  <li>
+                    <a href="#">Automation</a>
+                  </li>
+                  
+                  <li>
+                    <a href="#">Artificial Intelligence</a>
+                  </li>
+                  
+                  <li>
+                    <a href="#">IoT</a>
+                  </li>
+                </ul>
+              </li>
+              
+              <li class="nav__item">
+                <h2 class="nav__title">Legal</h2>
+                
+                <ul class="nav__ul">
+                  <li>
+                    <a href="#">Privacy Policy</a>
+                  </li>
+                  
+                  <li>
+                    <a href="#">Terms of Use</a>
+                  </li>
+                  
+                  <li>
+                    <a href="#">Sitemap</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            
+            <div class="legal">
+              <p>&copy; 2019 Something. All rights reserved.</p>
+              
+              <div class="legal__links">
+                <span>Made with <span class="heart">♥</span> remotely from Anywhere</span>
+              </div>
+            </div>
+          </footer>
+    </div>
+</body>
+</html>

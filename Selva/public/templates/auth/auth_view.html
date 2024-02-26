@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="{% static 'css/auth/login.css' %}">
+</head>
+<body>
+  <img src="{% static "img/login-background.jpg" %}" width="100%" height="870px" alt="">
+  <div class="main-container">
+    <div class="sub-container">
+      <div class="main">
+        <h1>Login</h1>
+        <form action="{% url 'login_view' %}" method="post" class="main-form">
+          {% csrf_token %}
+          <div class="elements">
+            <label for="username">Username</label>
+            <input type="text" name="name">
+          </div>
+          <div class="elements">
+            <label for="password">Password</label>
+            <input type="password" name="uuid">
+          </div>
+          <button type="submit">Login</button>
+        </form>
+      </div>
+      {% if error_invalid %}
+        <p>Invalid Ranger credentials. Please check your name and UUID.</p>
+      {% endif %}
+    </div>
+  </div>
+</body>
+</html>

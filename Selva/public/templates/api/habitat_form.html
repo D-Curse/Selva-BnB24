@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Habitat</title>
+    <link rel="stylesheet" href="{% static 'css/api/habitat_form.css' %}">
+</head>
+<body>
+    <h1>Add Habitat</h1>
+    <form method="post" action="{% url 'habitat_form' %}" class="habitat-form">
+        {% csrf_token %}
+        <label for="habitat">Habitat Name:</label>
+        <select id="habitat" name="habitat" required>
+            {% for habitat in habitats %}
+                <option value="{{ habitat.name }}">{{ habitat.name }}</option>
+            {% endfor %}
+        </select>
+
+        <label for="name">Mob Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="population_count">Count</label>
+        <input type="text" id="population_count" name="population_count" required>
+
+        <button type="submit">Add Habitat</button>
+    </form>
+</body>
+</html>

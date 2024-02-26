@@ -1,0 +1,51 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Enter</title>
+    <link rel="stylesheet" href="{% static 'css/core/data-enter.css' %}">
+</head>
+<body>
+    <div class="main-container">
+        <img src="{% static "img/form-background.png" %}" width="100%" alt="">
+        <div class="main-1">
+            <div class="main">
+                <h2>Enter Info </h2>
+                <form action="" class="main-form">
+                    <div class="elements">
+                        <label for="name">Name</label>
+                        <input type="text" placeholder="Eg:Lion">
+                    </div>
+                    
+                    <div class="elements">
+                        <label for="age">Age</label>
+                        <input type="number" placeholder="Eg:3">
+                    </div>
+                    <div class="elements">
+                        <label for="habitat">Habitats</label>
+                        <input type="text" placeholder="Eg:Savannah">
+                        
+                    </div>
+                    <div class="elements">
+                        <label for="nickname">Nickname</label>
+                        <input type="text" placeholder="Eg:Leo">
+                    </div>
+                    <div class="elements">
+                        <label for="sex">Sex</label>
+                        <input type="number" placeholder="Eg:MALE">
+                    </div>
+                    <div class="elements">
+                        <label for="health">Health</label>
+                        <input type="text" placeholder="Eg:Healthy">
+                    </div>
+                    
+                </form>
+                <button>Submit</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
