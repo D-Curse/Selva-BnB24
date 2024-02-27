@@ -65,7 +65,7 @@ Have questions or feedback? We're here to help!
 
 - **Get in Touch:** Use our contact form to reach out.
   
-- **Stay Connected:** Follow us on [Twitter](https://twitter.com/Selva) and [LinkedIn](https://linkedin.com/in/devtshubham) for updates.
+- **Stay Connected:** Follow us on Twitter and LinkedIn for updates.
 
 Join Nuevo today and let's begin the journey together!
 
