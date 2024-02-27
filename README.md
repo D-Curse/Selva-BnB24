@@ -67,7 +67,7 @@ Have questions or feedback? We're here to help!
   
 - **Stay Connected:** Follow us on Twitter and LinkedIn for updates.
 
-Join Nuevo today and let's begin the journey together!
+Join Selva today and let's begin the journey together!
 
 ---
 
